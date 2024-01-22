@@ -12,8 +12,8 @@ const runProducer = async () => {
   await producer.connect();
 
   await producer.send({
-    topic: "test-topic",
-    messages: [{ value: "Moroccan Universities List" }],
+    topic: "test",
+    messages: [{ value: JSON.stringify(data) }],
   });
 
   await producer.disconnect();
